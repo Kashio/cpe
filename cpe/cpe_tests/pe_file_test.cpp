@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
+#include "../cpe/pe_file.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -11,8 +12,8 @@ namespace CpeTests
 		
 		TEST_METHOD(TestMethod1)
 		{
-			// TODO: Your test code here
+			PeFile pefile;
+			Assert::AreEqual(pefile, pefile);
 		}
-
 	};
 }

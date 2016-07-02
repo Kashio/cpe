@@ -11,9 +11,9 @@
 #endif
 
 // This class is exported from the cpe.dll
-class CPE_API Ccpe {
+class CPE_API PeFile {
 public:
-	Ccpe(void);
+	PeFile(void);
 	// TODO: add your methods here.
 };
 

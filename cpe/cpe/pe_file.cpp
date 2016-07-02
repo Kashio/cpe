@@ -16,7 +16,7 @@ CPE_API int fncpe(void)
 
 // This is the constructor of a class that has been exported.
 // see cpe.h for the class definition
-Ccpe::Ccpe()
+PeFile::PeFile()
 {
     return;
 }
