@@ -12,8 +12,7 @@ namespace CpeTests
 		
 		TEST_METHOD(TestMethod1)
 		{
-			PeFile pefile;
-			Assert::AreEqual(pefile, pefile);
+			cpe::PeFile pefile(L"ssdsd");
 		}
 	};
 }
