@@ -1,22 +1,10 @@
-// cpe.cpp : Defines the exported functions for the DLL application.
-//
-
 #include "stdafx.h"
 #include "pe_file.h"
 
-
-// This is an example of an exported variable
-CPE_API int ncpe=0;
-
-// This is an example of an exported function.
-CPE_API int fncpe(void)
+namespace cpe
 {
-    return 42;
-}
-
-// This is the constructor of a class that has been exported.
-// see cpe.h for the class definition
-PeFile::PeFile()
-{
-    return;
+	PeFile::PeFile(std::wstring file_name)
+		: memory_mapped_file_{ file_name }, dos_header{ memory_mapped_file_.file_base }
+	{
+	}
 }
