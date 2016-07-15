@@ -11,6 +11,10 @@
 // Windows Header Files:
 #include <windows.h>
 
-
+#ifdef CPE_EXPORTS
+#define CPE_API __declspec(dllexport)
+#else
+#define CPE_API __declspec(dllimport)
+#endif
 
 // TODO: reference additional headers your program requires here

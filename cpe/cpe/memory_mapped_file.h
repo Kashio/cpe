@@ -8,7 +8,7 @@ namespace cpe
 {
 	namespace utils
 	{
-		class MemoryMappedFile
+		class CPE_API MemoryMappedFile
 		{
 		public:
 			MemoryMappedFile(const std::wstring);

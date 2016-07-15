@@ -8,7 +8,7 @@ namespace cpe
 {
 	namespace exceptions
 	{
-		class FileMemoryMappingException :
+		class CPE_API FileMemoryMappingException :
 			public std::runtime_error
 		{
 		public:

@@ -3,12 +3,14 @@
 
 namespace cpe
 {
+	template <typename T>
 	class pe_file_header
 	{
 	public:
 		pe_file_header();
 		virtual ~pe_file_header();
-		virtual bool isValid() const = 0;
+		virtual bool IsValid() const = 0;
+		size_t GetHeaderSize() const;
 	};
 }
 

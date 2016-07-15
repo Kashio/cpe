@@ -1,12 +1,11 @@
 ﻿#ifndef DOS_HEADER_H
 #define DOS_HEADER_H
 
-#include "stdafx.h"
 #include "pe_file_header.h"
 
 namespace cpe
 {
-	class DosHeader : public pe_file_header
+	class CPE_API DosHeader : public pe_file_header<DosHeader>
 	{
 	public:
 		DosHeader(const LPVOID file_base);
@@ -48,7 +47,7 @@ namespace cpe
 		void SetOemInfo(WORD);
 		void SetReserved2(size_t, WORD);
 		void SetRvaOfNtHeaders(DWORD);
-		bool isValid() const override final;
+		bool IsValid() const override final;
 	private:
 		IMAGE_DOS_HEADER image_dos_header_;
 	};

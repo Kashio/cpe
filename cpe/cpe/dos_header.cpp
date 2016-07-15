@@ -207,7 +207,7 @@ namespace cpe
 		image_dos_header_.e_lfanew = rvaOfNtHeaders;
 	}
 
-	bool DosHeader::isValid() const
+	bool DosHeader::IsValid() const
 	{
 		return image_dos_header_.e_magic == IMAGE_DOS_SIGNATURE;
 	}

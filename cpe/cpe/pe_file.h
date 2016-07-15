@@ -1,12 +1,6 @@
 #ifndef PE_FILE_H
 #define PE_FILE_H
 
-#ifdef CPE_EXPORTS
-#define CPE_API __declspec(dllexport)
-#else
-#define CPE_API __declspec(dllimport)
-#endif
-
 #include "memory_mapped_file.h"
 #include "dos_header.h"
 
