@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{ce620d93-aee7-418d-82fd-f04cc4b9d050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{b9681fcc-f14e-4a7e-9bb3-ccb8f571b8d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exceptions">
+      <UniqueIdentifier>{7ec80022-bde1-49a8-bf1e-85995acddd41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exceptions">
+      <UniqueIdentifier>{2bf19d72-1cde-4dd5-bd0a-2f1088d35fb7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -31,9 +43,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="memory_mapped_file.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
     <ClInclude Include="file_memory_mapping_exception.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="pe_file_header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -51,9 +66,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="memory_mapped_file.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Utils</Filter>
     </ClCompile>
     <ClCompile Include="file_memory_mapping_exception.cpp">
+      <Filter>Source Files\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_file_header.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
