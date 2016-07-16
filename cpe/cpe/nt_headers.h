@@ -17,7 +17,7 @@ namespace cpe
 		bool IsValid() const override final;
 		FileHeader file_header;
 	private:
-		IMAGE_NT_HEADERS image_nt_headers_;
+		PIMAGE_NT_HEADERS image_nt_headers_;
 	};
 }
 

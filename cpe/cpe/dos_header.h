@@ -49,7 +49,7 @@ namespace cpe
 		void SetRvaOfNtHeaders(DWORD);
 		bool IsValid() const override final;
 	private:
-		IMAGE_DOS_HEADER image_dos_header_;
+		PIMAGE_DOS_HEADER image_dos_header_;
 	};
 }
 

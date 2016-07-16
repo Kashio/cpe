@@ -8,7 +8,7 @@ namespace cpe
 	class CPE_API FileHeader : PeFileHeader<FileHeader>
 	{
 	public:
-		FileHeader(IMAGE_FILE_HEADER&);
+		FileHeader(PIMAGE_FILE_HEADER);
 		~FileHeader();
 		WORD GetMachine() const;
 		WORD GetNumberOfSections() const;
@@ -46,7 +46,7 @@ namespace cpe
 		bool IsValid() const override final;
 		size_t GetHeaderSize() const override final;
 	private:
-		IMAGE_FILE_HEADER& image_file_header_;
+		PIMAGE_FILE_HEADER image_file_header_;
 	};
 }
 
