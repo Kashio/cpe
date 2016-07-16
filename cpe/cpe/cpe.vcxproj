@@ -146,8 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dos_header.h" />
+    <ClInclude Include="file_header.h" />
     <ClInclude Include="file_memory_mapping_exception.h" />
     <ClInclude Include="memory_mapped_file.h" />
+    <ClInclude Include="nt_headers.h" />
     <ClInclude Include="pe_file.h" />
     <ClInclude Include="pe_file_header.h" />
     <ClInclude Include="stdafx.h" />
@@ -155,8 +157,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dos_header.cpp" />
+    <ClCompile Include="file_header.cpp" />
     <ClCompile Include="file_memory_mapping_exception.cpp" />
     <ClCompile Include="memory_mapped_file.cpp" />
+    <ClCompile Include="nt_headers.cpp" />
     <ClCompile Include="pe_file.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>

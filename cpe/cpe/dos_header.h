@@ -5,7 +5,7 @@
 
 namespace cpe
 {
-	class CPE_API DosHeader : public pe_file_header<DosHeader>
+	class CPE_API DosHeader : public PeFileHeader<DosHeader>
 	{
 	public:
 		DosHeader(const LPVOID file_base);

@@ -108,19 +108,19 @@ namespace cpe
 		return image_dos_header_.e_lfanew;
 	}
 
-	void DosHeader::SetMagicNumber(WORD magicNumber)
+	void DosHeader::SetMagicNumber(WORD magic_number)
 	{
-		image_dos_header_.e_magic = magicNumber;
+		image_dos_header_.e_magic = magic_number;
 	}
 
-	void DosHeader::SetNumberOfBytesOnLastPage(WORD numberOfBytesOnLastPage)
+	void DosHeader::SetNumberOfBytesOnLastPage(WORD number_of_bytes_on_last_page)
 	{
-		image_dos_header_.e_cblp = numberOfBytesOnLastPage;
+		image_dos_header_.e_cblp = number_of_bytes_on_last_page;
 	}
 
-	void DosHeader::SetNumberOfPages(WORD numberOfPages)
+	void DosHeader::SetNumberOfPages(WORD number_of_pages)
 	{
-		image_dos_header_.e_cp = numberOfPages;
+		image_dos_header_.e_cp = number_of_pages;
 	}
 
 	void DosHeader::SetRelocations(WORD relocations)
@@ -128,29 +128,29 @@ namespace cpe
 		image_dos_header_.e_crlc = relocations;
 	}
 
-	void DosHeader::SetSizeOfHeaderInParagraphs(WORD sizeOfHeaderInParagraphs)
+	void DosHeader::SetSizeOfHeaderInParagraphs(WORD size_of_header_in_paragraphs)
 	{
-		image_dos_header_.e_cparhdr = sizeOfHeaderInParagraphs;
+		image_dos_header_.e_cparhdr = size_of_header_in_paragraphs;
 	}
 
-	void DosHeader::SetMinParagraphsToAllocate(WORD minParagraphsToAllocate)
+	void DosHeader::SetMinParagraphsToAllocate(WORD min_paragraphs_to_allocate)
 	{
-		image_dos_header_.e_minalloc = minParagraphsToAllocate;
+		image_dos_header_.e_minalloc = min_paragraphs_to_allocate;
 	}
 
-	void DosHeader::SetMaxParagraphsToAllocate(WORD maxParagraphsToAllocate)
+	void DosHeader::SetMaxParagraphsToAllocate(WORD max_paragraphs_to_allocate)
 	{
-		image_dos_header_.e_maxalloc = maxParagraphsToAllocate;
+		image_dos_header_.e_maxalloc = max_paragraphs_to_allocate;
 	}
 
-	void DosHeader::SetInitialSs(WORD initialSs)
+	void DosHeader::SetInitialSs(WORD initial_ss)
 	{
-		image_dos_header_.e_ss = initialSs;
+		image_dos_header_.e_ss = initial_ss;
 	}
 
-	void DosHeader::setInitialSp(WORD initialSp)
+	void DosHeader::setInitialSp(WORD initial_sp)
 	{
-		image_dos_header_.e_sp = initialSp;
+		image_dos_header_.e_sp = initial_sp;
 	}
 
 	void DosHeader::SetChecksum(WORD checksum)
@@ -158,24 +158,24 @@ namespace cpe
 		image_dos_header_.e_csum = checksum;
 	}
 
-	void DosHeader::SetInitialIp(WORD initialIp)
+	void DosHeader::SetInitialIp(WORD initial_ip)
 	{
-		image_dos_header_.e_ip = initialIp;
+		image_dos_header_.e_ip = initial_ip;
 	}
 
-	void DosHeader::SetInitialCs(WORD initialCs)
+	void DosHeader::SetInitialCs(WORD initial_cs)
 	{
-		image_dos_header_.e_cs = initialCs;
+		image_dos_header_.e_cs = initial_cs;
 	}
 
-	void DosHeader::SetRvaOfRelocationTable(WORD rvaOfRelocationTable)
+	void DosHeader::SetRvaOfRelocationTable(WORD rva_of_relocation_table)
 	{
-		image_dos_header_.e_lfarlc = rvaOfRelocationTable;
+		image_dos_header_.e_lfarlc = rva_of_relocation_table;
 	}
 
-	void DosHeader::SetOverlayNumber(WORD overlayNumber)
+	void DosHeader::SetOverlayNumber(WORD overlay_number)
 	{
-		image_dos_header_.e_ovno = overlayNumber;
+		image_dos_header_.e_ovno = overlay_number;
 	}
 
 	void DosHeader::SetReserved1(size_t index, WORD res)
@@ -185,14 +185,14 @@ namespace cpe
 		image_dos_header_.e_res[index] = res;
 	}
 
-	void DosHeader::SetOemId(WORD oemId)
+	void DosHeader::SetOemId(WORD oem_id)
 	{
-		image_dos_header_.e_oemid = oemId;
+		image_dos_header_.e_oemid = oem_id;
 	}
 
-	void DosHeader::SetOemInfo(WORD oemInfo)
+	void DosHeader::SetOemInfo(WORD oem_info)
 	{
-		image_dos_header_.e_oeminfo = oemInfo;
+		image_dos_header_.e_oeminfo = oem_info;
 	}
 
 	void DosHeader::SetReserved2(size_t index, WORD res)
@@ -202,9 +202,9 @@ namespace cpe
 		image_dos_header_.e_res2[index] = res;
 	}
 
-	void DosHeader::SetRvaOfNtHeaders(DWORD rvaOfNtHeaders)
+	void DosHeader::SetRvaOfNtHeaders(DWORD rva_of_nt_headers)
 	{
-		image_dos_header_.e_lfanew = rvaOfNtHeaders;
+		image_dos_header_.e_lfanew = rva_of_nt_headers;
 	}
 
 	bool DosHeader::IsValid() const
