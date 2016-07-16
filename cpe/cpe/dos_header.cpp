@@ -79,7 +79,7 @@ namespace cpe
 		return image_dos_header_->e_ovno;
 	}
 
-	WORD DosHeader::GetReserved1(size_t index) const
+	WORD DosHeader::GetReserved1(const size_t index) const
 	{
 		if (index < 0 || index > 3)
 			throw std::out_of_range("Reserved1 index must be in the range of [0, 3]");
@@ -96,7 +96,7 @@ namespace cpe
 		return image_dos_header_->e_oeminfo;
 	}
 
-	WORD DosHeader::GetReserved2(size_t index) const
+	WORD DosHeader::GetReserved2(const size_t index) const
 	{
 		if (index < 0 || index > 9)
 			throw std::out_of_range("Reserved2 index must be in the range of [0, 9]");
@@ -108,94 +108,94 @@ namespace cpe
 		return image_dos_header_->e_lfanew;
 	}
 
-	void DosHeader::SetMagicNumber(WORD magic_number)
+	void DosHeader::SetMagicNumber(const WORD magic_number)
 	{
 		image_dos_header_->e_magic = magic_number;
 	}
 
-	void DosHeader::SetNumberOfBytesOnLastPage(WORD number_of_bytes_on_last_page)
+	void DosHeader::SetNumberOfBytesOnLastPage(const WORD number_of_bytes_on_last_page)
 	{
 		image_dos_header_->e_cblp = number_of_bytes_on_last_page;
 	}
 
-	void DosHeader::SetNumberOfPages(WORD number_of_pages)
+	void DosHeader::SetNumberOfPages(const WORD number_of_pages)
 	{
 		image_dos_header_->e_cp = number_of_pages;
 	}
 
-	void DosHeader::SetRelocations(WORD relocations)
+	void DosHeader::SetRelocations(const WORD relocations)
 	{
 		image_dos_header_->e_crlc = relocations;
 	}
 
-	void DosHeader::SetSizeOfHeaderInParagraphs(WORD size_of_header_in_paragraphs)
+	void DosHeader::SetSizeOfHeaderInParagraphs(const WORD size_of_header_in_paragraphs)
 	{
 		image_dos_header_->e_cparhdr = size_of_header_in_paragraphs;
 	}
 
-	void DosHeader::SetMinParagraphsToAllocate(WORD min_paragraphs_to_allocate)
+	void DosHeader::SetMinParagraphsToAllocate(const WORD min_paragraphs_to_allocate)
 	{
 		image_dos_header_->e_minalloc = min_paragraphs_to_allocate;
 	}
 
-	void DosHeader::SetMaxParagraphsToAllocate(WORD max_paragraphs_to_allocate)
+	void DosHeader::SetMaxParagraphsToAllocate(const WORD max_paragraphs_to_allocate)
 	{
 		image_dos_header_->e_maxalloc = max_paragraphs_to_allocate;
 	}
 
-	void DosHeader::SetInitialSs(WORD initial_ss)
+	void DosHeader::SetInitialSs(const WORD initial_ss)
 	{
 		image_dos_header_->e_ss = initial_ss;
 	}
 
-	void DosHeader::setInitialSp(WORD initial_sp)
+	void DosHeader::setInitialSp(const WORD initial_sp)
 	{
 		image_dos_header_->e_sp = initial_sp;
 	}
 
-	void DosHeader::SetChecksum(WORD checksum)
+	void DosHeader::SetChecksum(const WORD checksum)
 	{
 		image_dos_header_->e_csum = checksum;
 	}
 
-	void DosHeader::SetInitialIp(WORD initial_ip)
+	void DosHeader::SetInitialIp(const WORD initial_ip)
 	{
 		image_dos_header_->e_ip = initial_ip;
 	}
 
-	void DosHeader::SetInitialCs(WORD initial_cs)
+	void DosHeader::SetInitialCs(const WORD initial_cs)
 	{
 		image_dos_header_->e_cs = initial_cs;
 	}
 
-	void DosHeader::SetRvaOfRelocationTable(WORD rva_of_relocation_table)
+	void DosHeader::SetRvaOfRelocationTable(const WORD rva_of_relocation_table)
 	{
 		image_dos_header_->e_lfarlc = rva_of_relocation_table;
 	}
 
-	void DosHeader::SetOverlayNumber(WORD overlay_number)
+	void DosHeader::SetOverlayNumber(const WORD overlay_number)
 	{
 		image_dos_header_->e_ovno = overlay_number;
 	}
 
-	void DosHeader::SetReserved1(size_t index, WORD res)
+	void DosHeader::SetReserved1(const size_t index, const WORD res)
 	{
 		if (index < 0 || index > 3)
 			throw std::out_of_range("Reserved1 index must be in the range of [0, 3]");
 		image_dos_header_->e_res[index] = res;
 	}
 
-	void DosHeader::SetOemId(WORD oem_id)
+	void DosHeader::SetOemId(const WORD oem_id)
 	{
 		image_dos_header_->e_oemid = oem_id;
 	}
 
-	void DosHeader::SetOemInfo(WORD oem_info)
+	void DosHeader::SetOemInfo(const WORD oem_info)
 	{
 		image_dos_header_->e_oeminfo = oem_info;
 	}
 
-	void DosHeader::SetReserved2(size_t index, WORD res)
+	void DosHeader::SetReserved2(const size_t index, const WORD res)
 	{
 		if (index < 0 || index > 9)
 			throw std::out_of_range("Reserved2 index must be in the range of [0, 9]");

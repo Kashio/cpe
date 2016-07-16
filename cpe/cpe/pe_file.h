@@ -8,7 +8,7 @@ namespace cpe
 {
 	class CPE_API PeFile {
 	public:
-		PeFile(std::wstring);
+		PeFile(const std::wstring);
 		DosHeader dos_header;
 	private:
 		utils::MemoryMappedFile memory_mapped_file_;

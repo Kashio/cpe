@@ -150,6 +150,7 @@
     <ClInclude Include="file_memory_mapping_exception.h" />
     <ClInclude Include="memory_mapped_file.h" />
     <ClInclude Include="nt_headers.h" />
+    <ClInclude Include="optional_header.h" />
     <ClInclude Include="pe_file.h" />
     <ClInclude Include="pe_file_header.h" />
     <ClInclude Include="stdafx.h" />
@@ -161,6 +162,7 @@
     <ClCompile Include="file_memory_mapping_exception.cpp" />
     <ClCompile Include="memory_mapped_file.cpp" />
     <ClCompile Include="nt_headers.cpp" />
+    <ClCompile Include="optional_header.cpp" />
     <ClCompile Include="pe_file.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>

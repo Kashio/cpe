@@ -3,8 +3,8 @@
 
 namespace cpe
 {
-	FileHeader::FileHeader(PIMAGE_FILE_HEADER image_file_header)
-		: image_file_header_{ image_file_header }
+	FileHeader::FileHeader(NtHeaders* nt_headers, const PIMAGE_FILE_HEADER image_file_header)
+		: nt_headers_ { nt_headers }, image_file_header_ {image_file_header}
 	{
 	}
 
@@ -53,37 +53,37 @@ namespace cpe
 		return image_file_header_->Characteristics;
 	}
 
-	void FileHeader::SetMachine(WORD machine)
+	void FileHeader::SetMachine(const WORD machine)
 	{
 		image_file_header_->Machine = machine;
 	}
 
-	void FileHeader::SetNumberOfSections(WORD number_of_sections)
+	void FileHeader::SetNumberOfSections(const WORD number_of_sections)
 	{
 		image_file_header_->NumberOfSections = number_of_sections;
 	}
 
-	void FileHeader::SetTimeDateStamp(DWORD time_date_stamp)
+	void FileHeader::SetTimeDateStamp(const DWORD time_date_stamp)
 	{
 		image_file_header_->TimeDateStamp = time_date_stamp;
 	}
 
-	void FileHeader::SetRvaOfSymbolTable(DWORD rva_of_symbol_table)
+	void FileHeader::SetRvaOfSymbolTable(const DWORD rva_of_symbol_table)
 	{
 		image_file_header_->PointerToSymbolTable = rva_of_symbol_table;
 	}
 
-	void FileHeader::SetNumberOfSymbols(DWORD number_of_symbols)
+	void FileHeader::SetNumberOfSymbols(const DWORD number_of_symbols)
 	{
 		image_file_header_->NumberOfSymbols = number_of_symbols;
 	}
 
-	void FileHeader::SetSizeOfOptionalHeader(WORD size_of_optional_header)
+	void FileHeader::SetSizeOfOptionalHeader(const WORD size_of_optional_header)
 	{
 		image_file_header_->SizeOfOptionalHeader = size_of_optional_header;
 	}
 
-	void FileHeader::SetCharacteristics(WORD characteristics)
+	void FileHeader::SetCharacteristics(const WORD characteristics)
 	{
 		image_file_header_->Characteristics = characteristics;
 	}

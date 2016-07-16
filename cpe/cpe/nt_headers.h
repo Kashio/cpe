@@ -4,6 +4,7 @@
 
 #include "pe_file_header.h"
 #include "file_header.h"
+#include "optional_header.h"
 
 namespace cpe
 {
@@ -13,9 +14,10 @@ namespace cpe
 		NtHeaders(const LPVOID header_base);
 		~NtHeaders();
 		DWORD GetSignature() const;
-		void SetSignature(DWORD);
+		void SetSignature(const DWORD);
 		bool IsValid() const override final;
 		FileHeader file_header;
+		OptionalHeader optional_header;
 	private:
 		PIMAGE_NT_HEADERS image_nt_headers_;
 	};
